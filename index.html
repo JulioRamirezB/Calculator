@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+    <link type="text/css" rel="stylesheet" href="estilos.css">
+    <link rel="icon" type="image/png" href="../Iconos/icono Apple.PNG">
+    <script src="https://kit.fontawesome.com/356cf8bd5f.js"crossorigin="anonymous"></script>
+</head>
+<body onload="init()" >
+    <div>
+        <select onChange="window.location.href=this.value">
+            <option value="http://127.0.0.1:5500/Pr%C3%A1ctica%202/index.html">A</option>
+            <option value="http://127.0.0.1:5500/Pr%C3%A1ctica%204/fotos.html">B</option>
+        </select>
+        <select id="my_selection">
+            <option select value="Elije">Elije</option>
+            <option value="x" href="http://127.0.0.1:5500/Pr%C3%A1ctica%205/machote.html">Landscape</option>
+            <option value="y" href="http://127.0.0.1:5500/Pr%C3%A1ctica%202/index.html">Código</option>
+            <option value="Z" href="http://127.0.0.1:5500/Pr%C3%A1ctica%204/fotos.html">Fotos</option>
+            <option value="I" href="http://127.0.0.1:5500/Pr%C3%A1ctica%202/index.html#Bloqueado">Inicio</option>
+            <option value="P" href="http://127.0.0.1:5500/Pr%C3%A1ctica%202/index.html#principal">Principal</option>
+
+            </select>
+            
+            <script>
+            document.getElementById('my_selection').onchange = function() {
+                window.location.href = this.children[this.selectedIndex].getAttribute('href');
+            }
+            </script>
+    </div>
+    <table class="calculadora">
+        <tr>
+            <td colspan="4"><span id="resultado"></span></td>
+        </tr>
+        <tr>
+            <td><button id="siete" class="white" >7</button></td>
+            <td><button id="ocho" class="white" >8</button></td>
+            <td><button id="nueve" class="white" >9</button></td>
+            <td><button id="division" class="orange"><i class="fas fa-divide"></i></button></td>
+        </tr>
+        <tr>
+            <td><button id="cuatro" class="white" >4</button></td>
+            <td><button id="cinco" class="white" >5</button></td>
+            <td><button id="seis" class="white" >6</button></td>
+            <td><button id="multiplicacion" class="orange"><i class="fas fa-times"></i></button></td>
+        </tr>
+        <tr>
+            <td><button id="uno" class="white" >1</button></td>
+            <td><button id="dos" class="white" >2</button></td>
+            <td><button id="tres" class="white" >3</button></td>
+            <td><button id="resta" class="orange"><i class="fas fa-minus"></i></button></td>
+        </tr>
+        <tr>
+            <td><button id="igual" class="white" ><i class="fas fa-equals"></i></button></td>
+            <td><button id="reset" class="white" >C</button></td>
+            <td><button id="cero" class="white" >0</button></td>
+            <td><button id="suma" class="orange"><i class="fas fa-plus"></i></button></td>
+        </tr>
+
+    </table>
+
+    <script src="calculadora.js" ></script>
+</body>
+</html>
